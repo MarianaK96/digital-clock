@@ -10,8 +10,7 @@ import { InnerClock } from "./Styles/clockBody/innerClock.styles";
 import { OuterBody } from "./Styles/clockBody/outerClock.styles";
 
 const ClockComponent = () => {
-  let FirstHour = new Date().getHours();
-  const [hour, setHour] = useState(FirstHour);
+  const [hour, setHour] = useState("");
   const [min, setMin] = useState("");
   const [sec, setSec] = useState("");
 
@@ -59,3 +58,5 @@ const ClockComponent = () => {
 };
 
 export default ClockComponent;
+
+//testing git push

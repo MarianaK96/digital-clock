@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { size, device } from "../../../Base/breakpoints";
 
 export const PmBtn = styled.div`
-  opacity: ${() => (new Date().getHours() > 12 ? "1" : "0.5")};
+  opacity: ${() => (new Date().getHours() > 11 ? "1" : "0.5")};
   background-color: #ccd5d8;
   border-radius: 15px;
   box-shadow: 9px 7px 16px 0 rgba(0, 0, 0, 0.25),
