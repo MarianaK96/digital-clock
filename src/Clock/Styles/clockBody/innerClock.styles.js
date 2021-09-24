@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { size, device } from "../../../Base/breakpoints";
+import { device } from "../../../Base/breakpoints";
 
 export const InnerClock = styled.div`
   border-radius: 20px;

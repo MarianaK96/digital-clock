@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import styles from "../Base/clock.module.scss";
 import { AmBtn } from "./Styles/am_pm/am.styles";
 import { PmBtn } from "./Styles/am_pm/pm.styles";
@@ -9,22 +9,17 @@ import { TimeDivider } from "./Styles/am_pm/amPmDivider.styles";
 import { InnerClock } from "./Styles/clockBody/innerClock.styles";
 import { OuterBody } from "./Styles/clockBody/outerClock.styles";
 
+const { DateTime } = require("luxon");
+
 const ClockComponent = () => {
   const [hour, setHour] = useState("");
   const [min, setMin] = useState("");
   const [sec, setSec] = useState("");
 
   function refreshClock() {
-    if (hour >= 12) {
-      setHour(new Date().getHours() - 12);
-    } else if (hour === 0) {
-      setHour(12);
-    } else {
-      setHour(new Date().getHours());
-    }
-
-    setMin(new Date().getMinutes());
-    setSec(new Date().getSeconds());
+    setHour(DateTime.now().toFormat("h"));
+    setMin(DateTime.now().toFormat("mm"));
+    setSec(DateTime.now().toFormat("ss"));
   }
   useEffect(() => {
     const timerId = setInterval(refreshClock, 1000);
@@ -58,5 +53,3 @@ const ClockComponent = () => {
 };
 
 export default ClockComponent;
-
-//testing git push

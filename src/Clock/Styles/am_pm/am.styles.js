@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { size, device } from "../../../Base/breakpoints";
+import { device } from "../../../Base/breakpoints";
 
 export const AmBtn = styled.div`
   opacity: ${() => (new Date().getHours() < 12 ? "1" : "0.5")};

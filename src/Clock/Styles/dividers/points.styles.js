@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { size, device } from "../../../Base/breakpoints";
+import { device } from "../../../Base/breakpoints";
 
 export const Point = styled.div`
   background-color: #3b3c36;
